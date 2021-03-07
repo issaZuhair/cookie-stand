@@ -1,0 +1,12 @@
+ul{
+    float:left}
+
+#homeBody{
+    background-image: URL(https://codefellows.github.io/code-201-guide/curriculum/class-06/lab/assets/salmon.png);
+    color: whitesmoke;
+}
+header{
+    color:teal;
+    font-family: "Trirong", serif;
+
+}
