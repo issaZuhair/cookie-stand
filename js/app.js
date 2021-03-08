@@ -55,14 +55,14 @@ let list=document.createElement('li');
 main.appendChild(ulist);
 for(let i=6;i<=12;i++){
   ulist.appendChild(list);
-  seattleSalesHourly[i-6]=Seattle.salesSeattle(Seattle.minSeattleCust,Seattle.maxSeattleCust);
+  seattleSalesHourly[i-6]=Seattle.salesSeattle(Seattle.minSeattleCust,Seattle.maxSeattleCust)*Seattle.averageSales;
   list.innerText=i+'am:seattle '+seattleSalesHourly[i-6];
   list=document.createElement('li');
   seattleTotal+=seattleSalesHourly[i-6];
 }
 for(let i=1;i<=7;i++){
   ulist.appendChild(list);
-  seattleSalesHourly[7+i]=Seattle.salesSeattle(Seattle.minSeattleCust,Seattle.maxSeattleCust);
+  seattleSalesHourly[7+i]=Seattle.salesSeattle(Seattle.minSeattleCust,Seattle.maxSeattleCust)*Seattle.averageSales;
   list.innerText=i+'pm:seattle '+seattleSalesHourly[7+i];
   list=document.createElement('li');
   seattleTotal+=seattleSalesHourly[7+i];
@@ -75,14 +75,14 @@ let tokyoSalesHourly=[0];
 tokyo.appendChild(utlist);
 for(let i=6;i<=12;i++){
   utlist.appendChild(list);
-  tokyoSalesHourly[i-6]=Tokyo.salesTokyo(Tokyo.minTokyoCust,Tokyo.maxTokyoCust);
+  tokyoSalesHourly[i-6]=Tokyo.salesTokyo(Tokyo.minTokyoCust,Tokyo.maxTokyoCust)*Tokyo.averageSalesTokyo;
   list.innerText=i+'am: tokyo '+tokyoSalesHourly[i-6];
   list=document.createElement('li');
   tokyoTotal+=tokyoSalesHourly[i-6];
 }
 for(let i=1;i<=7;i++){
   utlist.appendChild(list);
-  tokyoSalesHourly[7+i]=Tokyo.salesTokyo(Tokyo.minTokyoCust,Tokyo.maxTokyoCust);
+  tokyoSalesHourly[7+i]=Tokyo.salesTokyo(Tokyo.minTokyoCust,Tokyo.maxTokyoCust)*Tokyo.averageSalesTokyo;
   list.innerText=i+'pm: tokyo '+ tokyoSalesHourly[7+i];
   list=document.createElement('li');
   tokyoTotal+= tokyoSalesHourly[7+i];
@@ -95,14 +95,14 @@ let dubaiTotal=0;
 let dubaiSalesHourly=[0];
 for(let i=6;i<=12;i++){
   uvlist.appendChild(list);
-  dubaiSalesHourly[i-6]=Dubai.salesDubai(Dubai.minDubaiCust,Dubai.maxDubaiCust);
+  dubaiSalesHourly[i-6]=Dubai.salesDubai(Dubai.minDubaiCust,Dubai.maxDubaiCust)*Dubai.averageSalesDubai;
   list.innerText=i+'am: Dubai '+dubaiSalesHourly[i-6];
   list=document.createElement('li');
   dubaiTotal+=dubaiSalesHourly[i-6];
 }
 for(let i=1;i<=7;i++){
   uvlist.appendChild(list);
-  dubaiSalesHourly[7+i]=Dubai.salesDubai(Dubai.minDubaiCust,Dubai.maxDubaiCust);
+  dubaiSalesHourly[7+i]=Dubai.salesDubai(Dubai.minDubaiCust,Dubai.maxDubaiCust)*Dubai.averageSalesDubai;
   list.innerText=i+'pm: Dubai '+dubaiSalesHourly[7+i];
   list=document.createElement('li');
   dubaiTotal+=dubaiSalesHourly[7+i];
@@ -115,14 +115,14 @@ let parisSalesHourly=[0];
 let parisTotal=0;
 for(let i=6;i<=12;i++){
   uxlist.appendChild(list);
-  parisSalesHourly[i-6]=Paris.salesParis(Paris.minParisCust,Paris.maxParisCust);
+  parisSalesHourly[i-6]=Paris.salesParis(Paris.minParisCust,Paris.maxParisCust)*Paris.averageSalesParis;
   list.innerText=i+'am: paris '+parisSalesHourly[i-6];
   list=document.createElement('li');
   parisTotal+=parisSalesHourly[i-6];
 }
 for(let i=1;i<=7;i++){
   uxlist.appendChild(list);
-  parisSalesHourly[i+7]=Paris.salesParis(Paris.minParisCust,Paris.maxParisCust);
+  parisSalesHourly[i+7]=Paris.salesParis(Paris.minParisCust,Paris.maxParisCust)*Paris.averageSalesParis;
   list.innerText=i+'pm: paris '+parisSalesHourly[i+7];
   list=document.createElement('li');
   parisTotal+=parisSalesHourly[i+7];
@@ -135,14 +135,14 @@ let limaTotal=0;
 let limaSalesHourly=[0];
 for(let i=6;i<=12;i++){
   uylist.appendChild(list);
-  limaSalesHourly[i-6]=Lima.salesLima(Lima.minLimaCust,Lima.maxLimaCust);
+  limaSalesHourly[i-6]=Lima.salesLima(Lima.minLimaCust,Lima.maxLimaCust)*Lima.averageSalesLima;
   list.innerText=i+'am: lima '+limaSalesHourly[i-6];
   list=document.createElement('li');
   limaTotal+=limaSalesHourly[i-6];
 }
 for(let i=0;i<7;i++){
   uylist.appendChild(list);
-  limaSalesHourly[i+7]=Lima.salesLima(Lima.minLimaCust,Lima.maxLimaCust);
+  limaSalesHourly[i+7]=Lima.salesLima(Lima.minLimaCust,Lima.maxLimaCust)*Lima.averageSalesLima;
   list.innerText=i+'pm: lima '+limaSalesHourly[7+i];
   list=document.createElement('li');
   limaTotal+=limaSalesHourly[7+i];
