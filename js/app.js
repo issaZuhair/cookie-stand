@@ -88,3 +88,6 @@ houlrySum=0;
 for(let i=0;i<locationSum.length;i++){
   houlrySum+=locationSum[i];
 }
+tableData=document.createElement('td');
+tableRow.appendChild(tableData);
+tableData.innerText=houlrySum;
