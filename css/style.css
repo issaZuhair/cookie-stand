@@ -1,14 +1,26 @@
 
-
+header{
+    margin: 25px;
+}
+li{
+    display: inline;
+    margin:150px;
+}
 main{
     background-image: URL(https://codefellows.github.io/code-201-guide/curriculum/class-06/lab/assets/salmon.png);
     color: whitesmoke;
     height: 1150px;
 }
-
+h1{
+    text-align: center;
+    color:rebeccapurple;
+}
+mark{
+    font-family: "Sofia", sans-serif;
+}
 tr:hover {border: chartreuse;}
 th {
-    background-color: #4CAF50;
+    background-color: #824caf;
     color: white;
     width:75px;
     align-content: center;
@@ -18,7 +30,7 @@ th {
       width:50px;
   }
   table{
-    background-color: crimson;
+    background-color: rgb(187, 20, 220);
     margin:25px;
     width:500px;
 }
