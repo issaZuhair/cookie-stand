@@ -1,8 +1,9 @@
 
 
-#homeBody{
+main{
     background-image: URL(https://codefellows.github.io/code-201-guide/curriculum/class-06/lab/assets/salmon.png);
     color: whitesmoke;
+    height: 1150px;
 }
 
 tr:hover {border: chartreuse;}
@@ -19,9 +20,18 @@ th {
   table{
     background-color: crimson;
     margin:25px;
+    width:500px;
 }
 fieldset{
     color:crimson;
     border:chocolate;
     border-radius: 15px;
+}
+td{
+    border:hotpink 5px solid;
+}
+th{
+    border:hotpink 5px solid;
+
+   
 }
