@@ -20,14 +20,20 @@ header.appendChild(tableRow);
 tableRow.appendChild(tableHead);
 form.addEventListener('submit',addition);
 function addition(event){
-  event.preventDefault(event);
   let standLocation=event.target.location.value;
   let minimumCustomers=parseInt(event.target.minimumCustomers.value);
   let maximumCustomers=parseInt(event.target.maximumCustomers.value);
   let averageSales=parseInt(event.target.averageSales.value);
 
-  let newStand= new CookieStand(minimumCustomers,maximumCustomers,averageSales,standLocation);
-  newStand.data();
+  event.preventDefault(event);
+  if(standLocation==='' && minimumCustomers===null && this.maximumCustomers ===null || this.averageSales===null){
+    alert('do not leave empty fields');
+  }else{
+
+    let newStand= new CookieStand(minimumCustomers,maximumCustomers,averageSales,standLocation);
+    newStand.data();
+  }
+
 }
 for(let i=0;i<=hours.length;i++){
   if(i<hours.length){
